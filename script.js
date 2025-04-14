@@ -1,9 +1,9 @@
 document.getElementById('btnSi').addEventListener('click', function() {
-    mostrarMensaje('¡Me Alegro que estes bien y recuerda que siempre estare presente para apoyarte en lo que quieras y decidas! ❤️');
+    mostrarMensaje('I'm glad you're well and remember that I will always be there to support you in whatever you want and decide! ❤️');
 });
 
 document.getElementById('btnNo').addEventListener('click', function() {
-    mostrarMensaje('"Entiendo que estás pasando por un momento difícil. No te presiones demasiado, toma las cosas con calma. Estoy aquí si necesitas hablar o simplemente desconectar. Todo mejora con el tiempo.". 😊');
+    mostrarMensaje('I understand that you are going through a difficult time. Don't Put too much pressure on yourself, take things slowly. I'm here if you need to talk or just tune out. Everything gets better with time.". 😊');
 });
 
 function mostrarMensaje(texto) {
