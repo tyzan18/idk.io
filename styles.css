@@ -1,73 +1,76 @@
 body {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    background-color: #ffe6e6;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 192, 203, 0.3); /* rosa suave translúcido */
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  z-index: 2;
 }
 
 h1 {
-    color: #ff4d4d;
-    font-size: 2.5rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #d6336c;
+  margin-bottom: 20px;
 }
 
-.opciones {
-    margin-top: 20px;
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    border: 2px solid #ff4d4d;
-    border-radius: 10px;
-    background-color: #fff;
-    color: #ff4d4d;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #ff80ab;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #ff4d4d;
-    color: #fff;
+  background: #ff4081;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-#mensaje {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: #ff4d4d;
-    font-weight: bold;
-    display: none; /* Inicialmente oculto */
+/* Canvas de flores */
+#flowers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.container {
-    margin-top: 30px;
-}
 
-#gifContainer {
-    max-width: 300px;
-}
-
-#gifContainerImg {
-    width: 100%;
-    border-radius: 15px;
-}
-div p {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ff4d4d;
-    text-align: center;
-    margin-top: 20px;
-}
-
-div p::before {
-    content: "Con cariño, ";
-    font-style: italic;
-    color: #ff989e;
-}
