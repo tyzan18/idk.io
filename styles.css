@@ -10,7 +10,15 @@ body {
   overflow: hidden;
 }
 
-/* Contenedor centrado */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 192, 203, 0.3); /* rosa suave translúcido */
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
 .card {
   position: relative;
   background: rgba(255, 255, 255, 0.85);
@@ -20,33 +28,48 @@ body {
   max-width: 500px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
   z-index: 2;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 h1 {
   font-family: 'Dancing Script', cursive;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #d6336c;
   margin-bottom: 20px;
-  line-height: 1.4;
-}
-
-/* Imagen central */
-.card img {
-  width: 180px;
-  height: auto;
-  margin: 20px 0;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .buttons {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
+
+button {
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #ff80ab;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ff4081;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Canvas de flores */
+#flowers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
